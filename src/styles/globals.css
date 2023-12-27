@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html body */
+@layer base {
+	body {
+		@apply  bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#E10856];
+	}
+	header{
+		@apply fixed top-0 z-50 left-0 flex w-full items-center justify-between p-2 transition-all lg:px-6 lg:py-4 bg-transparent;
+	}
+}
+/* Custom class name */
+@layer components {
+	.navLink {
+		@apply cursor-pointer text-sm font-light text-[#fff] hover:text-[#b3b3b3];
+	}
+	.svg{
+		@apply w-6 h-6 cursor-pointer hover:opacity-[50%] transform hover:scale-[120%] transition-all duration-75 font-bold active:scale-[100%] ;
+	}
+	.input {
+		@apply w-full rounded bg-transparent px-5 py-4 placeholder-[gray] outline-none transition-all duration-300 transform focus:bg-slate-900 focus:shadow-md border-2 border-slate-600 focus:border-slate-800;
+	}
+	.form_card{
+		@apply relative mt-24 space-y-8 rounded  py-10 px-6  md:max-w-md md:mx-14 bg-slate-700 backdrop-filter backdrop-blur-lg bg-opacity-50;
+	}
+	.auth_bg{
+		@apply fixed top-0 left-0 bg-[url('https:/rb.gy/p2hphi')] w-full h-[100vh] bg-cover z-50 grid place-content-center;
+	}
+	.layer{
+		@apply absolute top-0 left-0  w-full h-full bg-gradient-to-l bg-black backdrop-filter  backdrop-blur-sm bg-opacity-70;
+	}
+	.btn{
+		@apply w-10 h-10 border-2  duration-300 bg-slate-600 rounded-full grid place-content-center border-slate-500 hover:bg-slate-500 hover:bg-opacity-50 bg-opacity-50
+	}
+		.modalButton {
+		@apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[gray] bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10;
+	}
+
+	.membershipLink {
+		@apply cursor-pointer text-blue-500 hover:underline;
+	}
+}
